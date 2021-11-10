@@ -1,6 +1,6 @@
 ﻿using Confluent.Kafka;
 using Newtonsoft.Json;
-
+using System.Text;
 
 var consumerConfig = new ConsumerConfig
 {
@@ -26,10 +26,6 @@ using (var cons = new ConsumerBuilder<Ignore, string>(consumerConfig).Build())
                 var cr = cons.Consume(cts.Token);
                 var person = JsonConvert.DeserializeObject<Person>(cr.Message.Value);
                 Console.WriteLine(person.ToString());
-                foreach(var note in person.Notes)
-                {
-                    Console.WriteLine($"{note.Text} {note.Created}");
-                }
                 Console.WriteLine(person.GetType());
                 Console.WriteLine("---");
             }
@@ -53,8 +49,15 @@ public class Person
 
     public override string ToString()
     {
-        return $"{Name} {LastName} is {Age} years old";
+        var str = new StringBuilder();
+        str.AppendLine($"{Name}-{LastName}-{Age}");
+        foreach (var note in Notes)
+        {
+            str.AppendLine($"{note.Text}-{note.Created:f}");
+        }
+        return str.ToString();
     }
+
 }
 
 public class Note
