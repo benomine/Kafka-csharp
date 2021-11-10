@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".", ".", "{1C458D03-D756-4800-A89B-37EE39252590}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kafka-csharp.sln", "Kafka-csharp.sln", "{AF1E78F8-A2B9-4184-9472-367F68C4723D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer-Kafka", "Producer-Kafka\Producer-Kafka.csproj", "{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer-Kafka", "Consumer-Kafka\Consumer-Kafka.csproj", "{ED7BD011-01C7-4484-B8D6-E4723A9198D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7BD011-01C7-4484-B8D6-E4723A9198D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7BD011-01C7-4484-B8D6-E4723A9198D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7BD011-01C7-4484-B8D6-E4723A9198D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7BD011-01C7-4484-B8D6-E4723A9198D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF1E78F8-A2B9-4184-9472-367F68C4723D} = {1C458D03-D756-4800-A89B-37EE39252590}
+		{62860C7E-982C-4CDD-8EBC-30ECFD2DCF38} = {AF1E78F8-A2B9-4184-9472-367F68C4723D}
+		{ED7BD011-01C7-4484-B8D6-E4723A9198D4} = {AF1E78F8-A2B9-4184-9472-367F68C4723D}
+	EndGlobalSection
+EndGlobal
